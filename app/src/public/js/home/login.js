@@ -19,5 +19,8 @@ function login() {
     .then((res) => {
       res.json();
     })
-    .then(console.log);
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => console.log(err));
 }

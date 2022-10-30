@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 //? MIDDLE WARE APPLICATION
 app.use(express.static(`${__dirname}/src/public`));
 app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 //? MIDDLE WARE ROUTER
 app.use("/", home);

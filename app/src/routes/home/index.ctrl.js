@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 //? CTRL ROuter의 함수들을 모아 놓음
 
