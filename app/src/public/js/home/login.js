@@ -17,10 +17,14 @@ function login() {
     body: JSON.stringify(req),
   })
     .then((res) => {
-      res.json();
+      return res.json();
     })
     .then((res) => {
-      console.log(res);
+      if (res.success) {
+        location.href = "/";
+      } else {
+        alert("로그인 실패");
+      }
     })
     .catch((err) => console.log(err));
 }
