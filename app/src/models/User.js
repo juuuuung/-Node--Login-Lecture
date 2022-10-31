@@ -19,7 +19,6 @@ class User {
   }
   register() {
     const client = this.body;
-
     const response = UserStorage.save(client);
     return response;
   }
