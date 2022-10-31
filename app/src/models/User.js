@@ -7,15 +7,21 @@ class User {
     this.body = body;
   }
   login() {
-    const body = this.body;
-    const { id, pw } = UserStorage.getUserInfo(body.id);
+    const client = this.body;
+    const { id, pw } = UserStorage.getUserInfo(client.id);
     if (id) {
-      if (id === body.id && pw === body.pw) {
+      if (id === client.id && pw === client.pw) {
         return { success: true };
       }
       return { success: false, msg: "NO Password" };
     }
     return { success: false, msg: "NOT ID IN Database" };
+  }
+  register() {
+    const client = this.body;
+
+    const response = UserStorage.save(client);
+    return response;
   }
 }
 

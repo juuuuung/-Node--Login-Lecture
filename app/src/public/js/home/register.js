@@ -9,11 +9,14 @@ const id = document.getElementById("id"),
 registerBtn.addEventListener("click", register);
 
 function register() {
+  if (pw.value !== confirmPsword.value) {
+    return alert("비번 일치 xx");
+  }
+
   const req = {
     id: id.value,
     name: userName.value,
     pw: pw.value,
-    confirmPsword: confirmPsword.value,
   };
 
   fetch("/register", {
