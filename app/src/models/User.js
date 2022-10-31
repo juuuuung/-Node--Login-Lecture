@@ -17,9 +17,9 @@ class User {
     }
     return { success: false, msg: "NOT ID IN Database" };
   }
-  register() {
+  async register() {
     const client = this.body;
-    const response = UserStorage.save(client);
+    const response = await UserStorage.save(client);
     return response;
   }
 }

@@ -9,6 +9,7 @@ const id = document.getElementById("id"),
 registerBtn.addEventListener("click", register);
 
 function register() {
+  if (!id.value) return alert("id 입력해");
   if (pw.value !== confirmPsword.value) {
     return alert("비번 일치 xx");
   }
