@@ -17,5 +17,4 @@ app.use(bodyParser.json());
 
 //? MIDDLE WARE ROUTER
 app.use("/", home);
-
 module.exports = app;

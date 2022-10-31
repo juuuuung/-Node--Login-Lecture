@@ -23,7 +23,7 @@ function login() {
       if (res.success) {
         location.href = "/";
       } else {
-        alert("로그인 실패");
+        alert(res.msg);
       }
     })
     .catch((err) => console.log(err));
