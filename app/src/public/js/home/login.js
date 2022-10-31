@@ -2,7 +2,7 @@
 
 const id = document.getElementById("id"),
   pw = document.getElementById("pw"),
-  loginBtn = document.querySelector("button");
+  loginBtn = document.querySelector("#button");
 
 loginBtn.addEventListener("click", login);
 
