@@ -9,6 +9,7 @@ class User {
   async login() {
     const client = this.body;
     const { id, pw } = await UserStorage.getUserInfo(client.id);
+
     if (id) {
       if (id === client.id && pw === client.pw) {
         return { success: true };
@@ -17,6 +18,7 @@ class User {
     }
     return { success: false, msg: "NOT ID IN Database" };
   }
+
   async register() {
     const client = this.body;
     const response = await UserStorage.save(client);

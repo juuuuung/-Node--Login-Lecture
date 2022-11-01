@@ -7,6 +7,9 @@ const id = document.getElementById("id"),
 loginBtn.addEventListener("click", login);
 
 function login() {
+  if (!id.value) return alert("id입력해");
+  else if (!pw.value) return alert("pw입력해");
+
   const req = { id: id.value, pw: pw.value };
 
   fetch("/login", {

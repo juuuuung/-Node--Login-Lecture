@@ -2,6 +2,8 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const dotenv = require("dotenv");
+dotenv.config();
 
 //? ROUTING
 const home = require("./src/routes/home/home");
